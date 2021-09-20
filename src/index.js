@@ -11,9 +11,9 @@ const App = () => {
     const backgroundImage = 'images/image.jpg'
     const sidebarHeader = "Lets Travel";
     const menuItem =[
-        {name:'Home', to:'/', icon:'',subMenuItem:[]},
-        {name:'About', to:'/about', icon:'',subMenuItem:[]},
-        {name:'Destinations', to:'/destinations', icon:'',subMenuItem:[
+        {name:'Home', to:'/', icon:'icons/home.svg',subMenuItem:[]},
+        {name:'About', to:'/about', icon:'icons/about.svg',subMenuItem:[]},
+        {name:'Destinations', to:'/destinations', icon:'icons/destination.svg',subMenuItem:[
             {name:'Canada', to:'/canada'},
             {name:'Japan', to:'/japan'},
             {name:'Bhutan', to:'/bhutan'},
@@ -21,9 +21,9 @@ const App = () => {
             {name:'Germany', to:'/germany'},
             {name:'India', to:'/india'},
         ]},
-        {name:'Blog', to:'/blog', icon:'',subMenuItem:[]},
-        {name:'Services', to:'/serices', icon:'',subMenuItem:[]},
-        {name:'Contacts', to:'/contacts', icon:'',subMenuItem:[]},
+        {name:'Blog', to:'/blog', icon:'icons/blog.svg',subMenuItem:[]},
+        {name:'Services', to:'/serices', icon:'icons/service.svg',subMenuItem:[]},
+        {name:'Contacts', to:'/contacts', icon:'icons/contact.svg',subMenuItem:[]},
     ]
     ;
     return(

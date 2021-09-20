@@ -27,8 +27,39 @@ export const menuItemContainer = styled.div`
     
 `
 export const Item = styled.div`
-    text-align:center;
+    
     padding: 6px 20px;
     font-weight : 600;
-    color: rgb(19,15,64);
+    color: ${props => props.selected ? 'rgb(255,255,255)' :'rgb(19,15,64)' };
+    &:hover{
+        color: rgba(255,255,255);
+        transition: 0.1s ease-in all;
+    }
+    &:after{
+        content:'';
+        border: 1px solid ${props => props.selected ? 'rgb(255,255,255)' :'rgb(19,15,64)' };
+        margin: 8px 0 4px 8px;
+        display:block;
+       
+    }
+
+    ${props=> !props.selected && `
+        &:hover{
+            &:after{
+                border : 1px solid rgba(255,255,255,0.2);
+            }
+            transition: 0.1s ease-in all; 
+        }
+    `}
+`
+
+export const Icon = styled.img`
+    padding-right:20px;
+    height:16px;
+    width:16px;
+    color:white;
+`
+
+export const Text = styled.p`
+    display: inline;
 `
