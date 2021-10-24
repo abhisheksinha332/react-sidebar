@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const SidebarContainer = styled.div`
-    width : 18%;
+    width : ${props => props.isSidebarOpen ? '18%' : '5%'};
     max-width: 288px;
     min-width : 80px;
     background :yellow;
@@ -14,6 +14,8 @@ export const SidebarContainer = styled.div`
     background-repeat: no-repeat;
     background-position: center center;
     color:white;
+    position:relative;
+    transition: 0.2s ease-in all;
 `
 export const Header = styled.div`
     display:flex;
@@ -38,7 +40,7 @@ export const Item = styled.div`
     &:after{
         content:'';
         border: 1px solid ${props => props.selected ? 'rgb(255,255,255)' :'rgb(19,15,64)' };
-        margin: 8px 0 4px 8px;
+        margin: 8px 0 4px 2px;
         display:block;
        
     }
@@ -55,11 +57,40 @@ export const Item = styled.div`
 
 export const Icon = styled.img`
     padding-right:20px;
+    ${props=> !props.isSidebarOpen && `padding-left: 20px`}
+    ${props=> !props.isSidebarOpen && `margin-right: 20px`}
     height:16px;
-    width:16px;
+    width:${props=> props.isSidebarOpen ? '16px' : '16px'};
     color:white;
+    transition: 0.2s ease-in all; 
 `
 
 export const Text = styled.p`
-    display: inline;
+    display: ${props=> props.isSidebarOpen ? 'inline' : 'none'};
+    transition: 5s ease-in all; 
+`
+
+
+export const ToggleContainer = styled.div`
+    position: absolute;
+    width: 30%;
+    margin : 0 auto;
+    left: 0;
+    right : 0;
+    bottom: 10%;
+`
+export const Toggle = styled.div`
+    height: 40px;
+    cursor: pointer;
+    position:relative;
+    &:after {
+        content:'';
+        position:absolute;
+        left:0;
+        top:0.25em;
+        width:100%;
+        height:0.1em;
+        background:white;
+        box-shadow: 0 0.75em 0 0 white, 0 1.5em 0 0 white
+    }
 `

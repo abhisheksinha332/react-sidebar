@@ -9,7 +9,10 @@ import  * as s from './App.styles';
 const App = () => {
 
     const backgroundImage = 'images/image.jpg'
-    const sidebarHeader = "Lets Travel";
+    const sidebarHeader = {
+        fullName : 'Lets Travel',
+        name : 'Travel'
+    };
     const menuItem =[
         {name:'Home', to:'/', icon:'icons/home.svg',subMenuItem:[]},
         {name:'About', to:'/about', icon:'icons/about.svg',subMenuItem:[]},
