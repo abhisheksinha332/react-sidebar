@@ -1,10 +1,11 @@
 import React from 'react'
 import * as s from './Body.styles'
+import Routes from '../../Routes'
 
 const Body = () => {
     return (
         <s.BodyContainer>
-            Body
+            <Routes />
         </s.BodyContainer>
     )
 }
